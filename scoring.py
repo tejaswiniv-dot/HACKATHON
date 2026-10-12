@@ -1,3 +1,4 @@
+import json
 CATEGORY_WEIGHTS = {
     "Privacy": 0.40,
     "Accessibility": 0.30,
@@ -52,3 +53,71 @@ if __name__ == "__main__":
         assert total == 100, f"{category} should total 100!"
     assert abs(sum(CATEGORY_WEIGHTS.values()) - 1) < 1e-9
     print("All good.")
+
+def score_app(app):
+    scores = {
+    "Privacy": 0,
+    "Accessibility": 0,
+    "Learning Quality": 0
+    }
+    reasons=[]
+    for check in CHECKS:
+        answer = app["checks"][check["id"]]
+        if answer == "yes":
+            earned = check["points"]
+        elif answer=="partial":
+            earned = (check["points"])/2
+        else:
+            earned=0
+        scores[check["category"]] += earned
+        lost = check["points"] - earned
+        if lost>0:
+           reasons.append(f'{check["question"]}: lost {lost} points. {check["why"]}')
+    
+    trust_score = sum(
+        scores[category] * weight
+        for category, weight in CATEGORY_WEIGHTS.items()
+    )
+
+    return {
+        "Privacy": scores["Privacy"],
+        "Accessibility": scores["Accessibility"],
+        "Learning Quality": scores["Learning Quality"],
+        "Trust Score": round(trust_score, 2),
+        "reasons": reasons
+    }
+
+
+with open("data/apps.json", "r") as file:
+    apps = json.load(file)
+
+for app in apps:
+    result = score_app(app)
+    print(app["name"], result["Trust Score"])
+
+def find_alternatives(app):
+    alternatives = []
+    current_score = score_app(app)["Trust Score"]
+
+    for other in apps:
+        if other["name"] != app["name"] and other["category"] == app["category"]:
+            other_score = score_app(other)["Trust Score"]
+
+            if other_score > current_score:
+                alternatives.append({
+                    "name": other["name"],
+                    "Trust Score": other_score
+                })
+
+    return alternatives
+
+
+alternatives = find_alternatives(app)
+
+print("Alternatives:")
+if alternatives:
+    for alt in alternatives:
+        print(f'  - {alt["name"]} (Trust Score: {alt["Trust Score"]})')
+else:
+    print("  No better alternatives found.")
+    print()
