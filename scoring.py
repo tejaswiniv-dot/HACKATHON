@@ -45,7 +45,6 @@ CHECKS = [
 
 
 if __name__ == "__main__":
-    # Self-test: run with `python scoring.py`
     print(f"{len(CHECKS)} checks loaded")
     for category in CATEGORY_WEIGHTS:
         total = sum(c["points"] for c in CHECKS if c["category"] == category)
