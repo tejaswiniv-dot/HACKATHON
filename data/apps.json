@@ -1,0 +1,221 @@
+[
+    {
+        "id":1,
+        "name":"StudyNest",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "yes",
+            "trackers": "yes",
+            "parental_consent": "yes",
+            "data_deletion": "yes",
+            "screen_reader": "yes",
+            "captions": "yes",
+            "text_contrast": "yes",
+            "objectives": "yes",
+            "feedback": "yes",
+            "progress": "yes"
+        }
+    },
+
+    {
+        "id":2,
+        "name":"NoteBuddy",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "yes",
+            "trackers": "no",
+            "parental_consent": "yes",
+            "data_deletion": "yes",
+            "screen_reader": "partial",
+            "captions": "no",
+            "text_contrast": "yes",
+            "objectives": "yes",
+            "feedback": "no",
+            "progress": "partial"
+        }
+    },
+    
+    {
+        "id":3,
+        "name":"AccessAble",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "yes",
+            "trackers": "yes",
+            "parental_consent": "yes",
+            "data_deletion": "yes",
+            "screen_reader": "yes",
+            "captions": "yes",
+            "text_contrast": "yes",
+            "objectives": "yes",
+            "feedback": "yes",
+            "progress": "yes"
+        }
+    },
+    
+    {
+        "id":4,
+        "name":"EcoLearn",
+        "category": "Environment",
+        "sample_data":true,
+        "checks": {
+            "location": "yes",
+            "trackers": "yes",
+            "parental_consent": "yes",
+            "data_deletion": "yes",
+            "screen_reader": "yes",
+            "captions": "yes",
+            "text_contrast": "yes",
+            "objectives": "yes",
+            "feedback": "yes",
+            "progress": "yes"
+        }
+    },
+    {
+        "id":5,
+        "name":"QuizCloud",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "partial",
+            "trackers": "yes",
+            "parental_consent": "yes",
+            "data_deletion": "no",
+            "screen_reader": "no",
+            "captions": "no",
+            "text_contrast": "yes",
+            "objectives": "yes",
+            "feedback": "partial",
+            "progress": "partial"
+        }
+    },
+    {
+        "id":6,
+        "name":"ClassCompass",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "no",
+            "trackers": "yes",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "partial",
+            "captions": "yes",
+            "text_contrast": "no",
+            "objectives": "yes",
+            "feedback": "yes",
+            "progress": "partial"
+        }
+    },
+    {
+        "id":7,
+        "name":"WordSpring",
+        "category": "Language",
+        "sample_data":true,
+        "checks": {
+            "location": "no",
+            "trackers": "partial",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "yes",
+            "captions": "yes",
+            "text_contrast": "no",
+            "objectives": "yes",
+            "feedback": "yes",
+            "progress": "partial"
+        }
+    },
+    {
+        "id":8,
+        "name":"FocusFox",
+        "category": "Productivity",
+        "sample_data":true,
+        "checks": {
+            "location": "no",
+            "trackers": "yes",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "yes",
+            "captions": "yes",
+            "text_contrast": "no",
+            "objectives": "yes",
+            "feedback": "no",
+            "progress": "yes"
+        }
+    },
+    {
+        "id":9,
+        "name":"SkillTrail",
+        "category": "Language",
+        "sample_data":true,
+        "checks": {
+            "location": "no",
+            "trackers": "yes",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "yes",
+            "captions": "yes",
+            "text_contrast": "partial",
+            "objectives": "yes",
+            "feedback": "yes",
+            "progress": "partial"
+        }
+    },
+    {
+        "id":10,
+        "name":"AdRush",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "no",
+            "trackers": "partial",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "partial",
+            "captions": "no",
+            "text_contrast": "no",
+            "objectives": "partial",
+            "feedback": "no",
+            "progress": "partial"
+        }
+    },
+    {
+        "id":11,
+        "name":"DataSponge",
+        "category": "Education",
+        "sample_data":true,
+        "checks": {
+            "location": "partial",
+            "trackers": "partial",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "no",
+            "captions": "no",
+            "text_contrast": "partial",
+            "objectives": "partial",
+            "feedback": "no",
+            "progress": "partial"
+        }
+    },
+    {
+        "id":12,
+        "name":"BlindSpot",
+        "category": "Language",
+        "sample_data":true,
+        "checks": {
+            "location": "no",
+            "trackers": "partial",
+            "parental_consent": "partial",
+            "data_deletion": "no",
+            "screen_reader": "partial",
+            "captions": "no",
+            "text_contrast": "partial",
+            "objectives": "partial",
+            "feedback": "no",
+            "progress": "no"
+        }
+    }
+]
